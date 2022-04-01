@@ -1,3 +1,5 @@
+#Autores: Arturo Ramos Rey             arturo.ramos.rey@udc.es
+#         Adriano Miranda Seoane       adriano.miranda@udc.es
 import sys
 
 def readFile(path):
