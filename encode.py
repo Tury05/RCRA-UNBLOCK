@@ -61,9 +61,9 @@ def writeOutput(path, block_list, goal_param):
     header = "#program initial.\n"
     pos = goal_param[2]
     if goal_param[1] == "hori":
-        pos = (pos[0], pos[1]+int(goal_param[3]))
+        pos = (pos[0], int(goal_param[3]))
     elif goal_param[1] == "vert":
-        pos = (pos[0]+int(goal_param[3], pos[1]))
+        pos = (int(goal_param[3]), pos[1])
     
     goal = "#program final.\n goal :-" + "h(" + goal_param[0] + ", p" + str(pos) 
     goal +=  ")." + " \n :- not goal."
