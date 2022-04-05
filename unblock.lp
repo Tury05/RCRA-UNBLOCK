@@ -1,13 +1,13 @@
 %%Autores: Arturo Ramos Rey             arturo.ramos.rey@udc.es
 %%         Adriano Miranda Seoane       adriano.miranda@udc.es
-#const size = 6.
+
+#const size = 6.    %Grid size
+ncells(-(size-1)..(size-1)).
+action(move(B, N)) :- block(B, _, _), ncells(N).
 
 #program always.
     occupy(B, X..X+S-1, Y) :- h(block(B, vert, S), p(X,Y)).
     occupy(B, X, Y..Y+S-1) :- h(block(B, hori, S), p(X,Y)).
-
-    ncells(-(size-1)..(size-1)).
-    action(move(B, N)) :- block(B, _, _), ncells(N).
     
 #program dynamic.
     % Action generation
