@@ -7,9 +7,9 @@ Se ha creado un programa en python el cual lee un txt con la disposición de los
 # Ejecucion
 Para obtener y mostrar el resultado del puzzle a través de pygame, es necesario ejecutar estos tres comandos.
 ```
-python3 encode.py < level01.txt > level01.lp
-telingo --verbose=0 --warn none unblock.lp levelXX.lp > solXX.txt
-python3 showunblock.py level1.txt sol1.txt
+python3 encode.py ./examples/level1.txt level1.lp
+telingo --verbose=0 --warn none unblock.lp level1.lp > sol1.txt
+python3 showunblock.py ./examples/level1.txt sol1.txt
 ```
 # Autores
 Arturo Ramos Rey
